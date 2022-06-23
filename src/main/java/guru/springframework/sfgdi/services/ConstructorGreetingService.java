@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by jt on 12/26/19.
  */
-@Service
+//geen @Service - geset als bean in GreetingServiceConfig (example of config)
 public class ConstructorGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
