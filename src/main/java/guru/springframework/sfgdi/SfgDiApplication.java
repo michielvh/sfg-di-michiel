@@ -1,8 +1,15 @@
 package guru.springframework.sfgdi;
 
 import guru.springframework.sfgdi.config.SfgConfiguration;
-import guru.springframework.sfgdi.controllers.*;
+import guru.springframework.sfgdi.config.SfgConstructorConfig;
+import guru.springframework.sfgdi.controllers.ConstructorInjectedController;
+import guru.springframework.sfgdi.controllers.I18nController;
+import guru.springframework.sfgdi.controllers.MyController;
+import guru.springframework.sfgdi.controllers.PropertyInjectedController;
+import guru.springframework.sfgdi.controllers.SetterInjectedController;
 import guru.springframework.sfgdi.datasource.FakeDataSource;
+import guru.springframework.sfgdi.controllers.*;
+import guru.springframework.sfgdi.controllers.PetController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -50,6 +57,11 @@ public class SfgDiApplication {
 		System.out.println(sfgConfiguration.getPassword());
 		System.out.println(sfgConfiguration.getJdbcurl());
 
+		System.out.println("------ Constructor Binding");
+		SfgConstructorConfig sfgConstructorConfig=ctx.getBean(SfgConstructorConfig.class);
+		System.out.println(sfgConstructorConfig.getUsername());
+		System.out.println(sfgConstructorConfig.getPassword());
+		System.out.println(sfgConstructorConfig.getJdbcurl());
 	}
 
 }
