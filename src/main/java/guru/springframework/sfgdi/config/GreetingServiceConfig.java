@@ -7,7 +7,6 @@ import org.springframework.context.annotation.PropertySource;
 import guru.springframework.sfgdi.datasource.FakeDataSource;
 import guru.springframework.sfgdi.services.ConstructorGreetingService;
 
-@PropertySource("classpath:datasource.properties")
 @Configuration
 public class GreetingServiceConfig {
 
